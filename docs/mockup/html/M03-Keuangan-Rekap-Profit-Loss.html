@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1440">
+<title>M03 Keuangan · Rekap Profit & Loss</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" data-dc-tpl="1">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" data-dc-tpl="2">
+<style>
+
+body{margin:0;font-family:'Inter',system-ui,sans-serif;color:#17231A;background:#F3F6F2}
+a{color:#23602C}a:hover{color:#17231A}
+*{box-sizing:border-box}
+.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.card{background:#fff;border:1px solid #E1E7DF;border-radius:14px;box-shadow:0 1px 2px rgba(23,35,26,.05)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 16px;border-radius:12px;font:600 15px/1 'Inter',sans-serif;border:1px solid transparent;cursor:pointer;text-decoration:none;white-space:nowrap}
+.btn-p{background:#2F7D3A;color:#fff}.btn-p:hover{background:#23602C;color:#fff}
+.btn-s{background:#fff;color:#17231A;border-color:#C9D3C6}.btn-s:hover{color:#17231A;background:#F3F6F2}
+.badge{display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px;border-radius:999px;font:600 13px/1 'Inter',sans-serif;white-space:nowrap}
+.b-green{background:#E6F2E7;color:#1F5A27}.b-red{background:#FBE9E6;color:#9E2A1C}.b-gray{background:#EEF1ED;color:#46524A}
+.muted{color:#56645A}.src{font:500 12px/1.4 'Inter',sans-serif;color:#56645A}
+.h2{margin:0;font:700 17px/1.3 'Inter',sans-serif}
+.snav{display:flex;align-items:center;gap:12px;height:44px;padding:0 12px;border-radius:10px;font:600 15px/1 'Inter',sans-serif;color:#46524A;text-decoration:none}
+.snav:hover{background:#F3F6F2;color:#17231A}.snav.on{background:#E6F2E7;color:#1F5A27}
+.sel{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 14px;border-radius:12px;border:1px solid #C9D3C6;background:#fff;font:600 14px/1 'Inter',sans-serif;color:#17231A}
+.iconbtn{width:44px;height:44px;border-radius:12px;border:1px solid #E1E7DF;background:#fff;color:#46524A;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;position:relative}
+.chip{display:inline-flex;align-items:center;gap:6px;height:40px;padding:0 14px;border-radius:20px;border:1px solid #C9D3C6;background:#fff;font:600 14px/1 'Inter',sans-serif;color:#17231A;white-space:nowrap;cursor:pointer}
+.chip.on{background:#17231A;color:#fff;border-color:#17231A}
+.kpi{padding:18px;display:flex;flex-direction:column;gap:6px}
+.kl{font:600 14px/1.3 'Inter',sans-serif;color:#46524A}
+.kv{font:800 26px/1.15 'Inter',sans-serif}
+th{font:600 12px/1 'Inter',sans-serif;color:#56645A;text-transform:uppercase;letter-spacing:.04em;text-align:left;padding:14px 16px;background:#F7F9F6}
+td{padding:12px 16px;border-top:1px solid #EEF1ED;font:500 14px/1.4 'Inter',sans-serif;vertical-align:middle}
+.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+
+html,body{margin:0;width:1440px;height:1180px}
+</style>
+</head>
+<body>
+<div data-dc-tpl="4" style="width: 1440px; height: 1180px; display: flex; background: rgb(243, 246, 242);">
+  <aside data-dc-tpl="5" style="width: 248px; flex: 0 0 auto; background: rgb(255, 255, 255); border-right: 1px solid rgb(225, 231, 223); display: flex; flex-direction: column; padding: 20px 14px; gap: 4px;">
+    <div data-dc-tpl="6" style="display: flex; align-items: center; gap: 10px; padding: 0px 6px 20px;">
+      <svg data-dc-tpl="7" width="38" height="38" viewBox="0 0 36 36" role="img" aria-label="Logo Dr. Greenhouse Pendamping"><rect data-dc-tpl="8" width="36" height="36" rx="10" fill="#2F7D3A"></rect><path data-dc-tpl="9" d="M10 25c0-8 5-13 15-14 0 9-5 14-14 14Zm0 0 7-7" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path><circle data-dc-tpl="10" cx="26.5" cy="25.5" r="3.5" fill="#E8604E"></circle></svg>
+      <div data-dc-tpl="11"><div data-dc-tpl="12" style="font: 800 16px / 1.2 Inter, sans-serif;">Dr. Greenhouse</div><div data-dc-tpl="13" class="src">Pendamping · Agrotani</div></div>
+    </div>
+    <a data-dc-tpl="14" class="snav" href="M01-Dasbor.dc.html"><svg data-dc-tpl="15" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="16" d="M3 10.5 12 3l9 7.5M5 9.5V20h5v-6h4v6h5V9.5"></path></svg>Dasbor</a>
+    <a data-dc-tpl="17" class="snav" href="M02-LogAktivitas.dc.html"><svg data-dc-tpl="18" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="19" d="M9 4h6v3H9zM9 5.5H6.5A1.5 1.5 0 0 0 5 7v12.5A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5V7a1.5 1.5 0 0 0-1.5-1.5H15M8.5 12h7M8.5 16h5"></path></svg>Log Aktivitas</a>
+    <a data-dc-tpl="20" class="snav on" href="M03-Keuangan.dc.html" aria-current="page"><svg data-dc-tpl="21" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="22" d="M4 7.5A2.5 2.5 0 0 1 6.5 5H18v3M4 7.5V18a2 2 0 0 0 2 2h14V8H6.5A2.5 2.5 0 0 1 4 7.5ZM16 14h1.5"></path></svg>Keuangan</a>
+    <a data-dc-tpl="23" class="snav" href="M04-JadwalTanam.dc.html"><svg data-dc-tpl="24" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="25" d="M4 6.5A1.5 1.5 0 0 1 5.5 5h13A1.5 1.5 0 0 1 20 6.5v12a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5ZM4 10h16M8 3v4M16 3v4"></path></svg>Jadwal Tanam</a>
+    <a data-dc-tpl="26" class="snav" href="M05-Macroclimate.dc.html"><svg data-dc-tpl="27" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="28" d="M7 18a4 4 0 0 1-.5-7.97A5.5 5.5 0 0 1 17.2 9 4.5 4.5 0 0 1 17 18Z"></path></svg>Macroclimate</a>
+    <div data-dc-tpl="29" style="flex: 1 1 0%;"></div>
+    <a data-dc-tpl="30" class="snav" href="P01-Onboarding.dc.html"><svg data-dc-tpl="31" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="32" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18ZM9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17h.01"></path></svg>Bantuan</a>
+    <div data-dc-tpl="33" style="display: flex; align-items: center; gap: 10px; padding: 12px 8px 0px; border-top: 1px solid rgb(238, 241, 237); margin-top: 8px;">
+      <div data-dc-tpl="34" style="width: 38px; height: 38px; border-radius: 19px; background: rgb(23, 35, 26); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; font: 700 14px / 1 Inter, sans-serif;">PF</div>
+      <div data-dc-tpl="35"><div data-dc-tpl="36" style="font: 700 14px / 1.3 Inter, sans-serif;">Pak Ferry</div><div data-dc-tpl="37" class="src">Manajemen</div></div>
+    </div>
+  </aside>
+
+  <main data-dc-tpl="38" style="flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column;">
+    <header data-dc-tpl="39" style="height: 72px; flex: 0 0 auto; background: rgb(255, 255, 255); border-bottom: 1px solid rgb(225, 231, 223); display: flex; align-items: center; gap: 12px; padding: 0px 32px;">
+      <div data-dc-tpl="40" style="flex: 1 1 0%;">
+        <h1 data-dc-tpl="41" style="margin: 0px; font: 800 22px / 1.2 Inter, sans-serif;">Keuangan · Rekap Profit &amp; Loss</h1>
+        <div data-dc-tpl="42" class="src" style="display: flex; align-items: center; gap: 6px; margin-top: 2px;"><span data-dc-tpl="43" style="width: 8px; height: 8px; border-radius: 4px; background: rgb(47, 125, 58);"></span>Data Dr. Greenhouse diperbarui 07.52 WIB · Sel, 3 Nov 2026</div>
+      </div>
+      <button data-dc-tpl="44" class="sel"><svg data-dc-tpl="45" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="46" d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14ZM5 19l7-7"></path></svg>Semua greenhouse<svg data-dc-tpl="47" class="i" viewBox="0 0 24 24" aria-hidden="true" style="width: 16px; height: 16px;"><path data-dc-tpl="48" d="M6 9l6 6 6-6"></path></svg></button>
+      <button data-dc-tpl="49" class="iconbtn" aria-label="Pengingat, 2 baru"><svg data-dc-tpl="50" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="51" d="M6 16V11a6 6 0 1 1 12 0v5l1.5 2h-15ZM10 20a2 2 0 0 0 4 0"></path></svg><span data-dc-tpl="52" style="position: absolute; top: 8px; right: 9px; width: 9px; height: 9px; border-radius: 5px; background: rgb(200, 64, 47); border: 2px solid rgb(255, 255, 255);"></span></button>
+      <a data-dc-tpl="53" class="btn btn-p" href="M06-AsistenAI.dc.html"><svg data-dc-tpl="54" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="55" d="M5 18.5 3.5 21V6.5A2.5 2.5 0 0 1 6 4h12a2.5 2.5 0 0 1 2.5 2.5v9A2.5 2.5 0 0 1 18 18H5.5ZM8 9.5h8M8 13h5"></path></svg>Tanya Asisten AI</a>
+    </header>
+
+    <div data-dc-tpl="56" style="padding: 28px 32px; display: flex; flex-direction: column; gap: 20px;">
+      <div data-dc-tpl="57" style="display: flex; align-items: center; gap: 8px;">
+        
+          <button data-dc-tpl="59" class="chip on"><span class="sc-interp">Oktober 2026</span></button>
+        
+          <button data-dc-tpl="59" class="chip"><span class="sc-interp">November 2026</span></button>
+        
+        <button data-dc-tpl="60" class="chip"><svg data-dc-tpl="61" class="i" viewBox="0 0 24 24" aria-hidden="true" style="width: 16px; height: 16px;"><path data-dc-tpl="62" d="M4 6.5A1.5 1.5 0 0 1 5.5 5h13A1.5 1.5 0 0 1 20 6.5v12a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5ZM4 10h16M8 3v4M16 3v4"></path></svg>Rentang tanggal</button>
+        <div data-dc-tpl="63" style="flex: 1 1 0%;"></div>
+        <span data-dc-tpl="64" class="src" style="font-size: 13px;">Periode: <strong data-dc-tpl="65" style="color: rgb(23, 35, 26);"><span class="sc-interp">1–31 Oktober 2026</span></strong></span>
+      </div>
+
+      <div data-dc-tpl="66" style="display: grid; grid-template-columns: repeat(4, minmax(0px, 1fr)); gap: 16px;">
+        <div data-dc-tpl="67" class="card kpi"><div data-dc-tpl="68" class="kl">Pemasukan</div><div data-dc-tpl="69" class="kv" style="color: rgb(31, 90, 39);"><span class="sc-interp">Rp 5.300.000</span></div><div data-dc-tpl="70" class="src" style="font-size: 13px;">Penjualan panen</div></div>
+        <div data-dc-tpl="71" class="card kpi"><div data-dc-tpl="72" class="kl">Pengeluaran</div><div data-dc-tpl="73" class="kv"><span class="sc-interp">Rp 3.100.000</span></div><div data-dc-tpl="74" class="src" style="font-size: 13px;">Pupuk, obat, tenaga kerja, lainnya</div></div>
+        <div data-dc-tpl="75" class="card kpi" style="background: rgb(23, 35, 26); border-color: rgb(23, 35, 26); color: rgb(255, 255, 255);"><div data-dc-tpl="76" class="kl" style="color: rgb(213, 222, 214);">Profit / Loss (selisih)</div><div data-dc-tpl="77" class="kv"><span class="sc-interp">+Rp 2.200.000</span></div><div data-dc-tpl="78" style="font: 500 13px / 1.4 Inter, sans-serif; color: rgb(213, 222, 214);">Pemasukan − pengeluaran</div></div>
+        <div data-dc-tpl="79" class="card kpi"><div data-dc-tpl="80" class="kl">Jumlah transaksi</div><div data-dc-tpl="81" class="kv"><span class="sc-interp">31</span></div><div data-dc-tpl="82" class="src" style="font-size: 13px;">dari 3 petani</div></div>
+      </div>
+
+      <div data-dc-tpl="83" style="display: grid; grid-template-columns: repeat(12, minmax(0px, 1fr)); gap: 16px;">
+        <section data-dc-tpl="84" class="card" style="grid-column: span 8; overflow: hidden;">
+          <div data-dc-tpl="85" style="padding: 16px 16px 12px; display: flex; align-items: center; justify-content: space-between;"><h2 data-dc-tpl="86" class="h2">Rekap per greenhouse</h2><span data-dc-tpl="87" class="src" style="font-size: 13px;">Setiap baris hanya berisi data milik petani tersebut</span></div>
+          <table data-dc-tpl="88" style="width: 100%; border-collapse: collapse;">
+            <thead data-dc-tpl="89"><tr data-dc-tpl="90"><th data-dc-tpl="91">Greenhouse · pemilik data</th><th data-dc-tpl="92" class="num">Pemasukan</th><th data-dc-tpl="93" class="num">Pengeluaran</th><th data-dc-tpl="94" class="num">Profit / Loss</th><th data-dc-tpl="95" style="width: 180px;">Perbandingan</th></tr></thead>
+            <tbody data-dc-tpl="96">
+              
+                <tr data-dc-tpl="98">
+                  <td data-dc-tpl="99"><div data-dc-tpl="100" style="font-weight: 700;"><span class="sc-interp">GH-01</span></div><div data-dc-tpl="101" class="src"><span class="sc-interp">Pak Jaka</span></div></td>
+                  <td data-dc-tpl="102" class="num"><span class="sc-interp">Rp 2.480.000</span><div data-dc-tpl="103" class="src"><span class="sc-interp"></span></div></td>
+                  <td data-dc-tpl="104" class="num"><span class="sc-interp">Rp 1.865.000</span></td>
+                  <td data-dc-tpl="105" class="num" style="font-weight: 700; color: rgb(31, 90, 39);"><span class="sc-interp">+Rp 615.000</span></td>
+                  <td data-dc-tpl="106"><div data-dc-tpl="107" style="display: flex; flex-direction: column; gap: 4px;"><div data-dc-tpl="108" style="height: 8px; border-radius: 4px; background: rgb(47, 125, 58); width: 88%;"></div><div data-dc-tpl="109" style="height: 8px; border-radius: 4px; background: rgb(227, 154, 59); width: 66%;"></div></div></td>
+                </tr>
+              
+                <tr data-dc-tpl="98">
+                  <td data-dc-tpl="99"><div data-dc-tpl="100" style="font-weight: 700;"><span class="sc-interp">GH-02</span></div><div data-dc-tpl="101" class="src"><span class="sc-interp">Pak Indra</span></div></td>
+                  <td data-dc-tpl="102" class="num"><span class="sc-interp">Rp 2.820.000</span><div data-dc-tpl="103" class="src"><span class="sc-interp"></span></div></td>
+                  <td data-dc-tpl="104" class="num"><span class="sc-interp">Rp 905.000</span></td>
+                  <td data-dc-tpl="105" class="num" style="font-weight: 700; color: rgb(31, 90, 39);"><span class="sc-interp">+Rp 1.915.000</span></td>
+                  <td data-dc-tpl="106"><div data-dc-tpl="107" style="display: flex; flex-direction: column; gap: 4px;"><div data-dc-tpl="108" style="height: 8px; border-radius: 4px; background: rgb(47, 125, 58); width: 100%;"></div><div data-dc-tpl="109" style="height: 8px; border-radius: 4px; background: rgb(227, 154, 59); width: 32%;"></div></div></td>
+                </tr>
+              
+                <tr data-dc-tpl="98">
+                  <td data-dc-tpl="99"><div data-dc-tpl="100" style="font-weight: 700;"><span class="sc-interp">GH-03</span></div><div data-dc-tpl="101" class="src"><span class="sc-interp">Pak Ari</span></div></td>
+                  <td data-dc-tpl="102" class="num"><span class="sc-interp">Rp 0</span><div data-dc-tpl="103" class="src"><span class="sc-interp">Belum panen</span></div></td>
+                  <td data-dc-tpl="104" class="num"><span class="sc-interp">Rp 330.000</span></td>
+                  <td data-dc-tpl="105" class="num" style="font-weight: 700; color: rgb(158, 42, 28);"><span class="sc-interp">−Rp 330.000</span></td>
+                  <td data-dc-tpl="106"><div data-dc-tpl="107" style="display: flex; flex-direction: column; gap: 4px;"><div data-dc-tpl="108" style="height: 8px; border-radius: 4px; background: rgb(47, 125, 58); width: 2%;"></div><div data-dc-tpl="109" style="height: 8px; border-radius: 4px; background: rgb(227, 154, 59); width: 12%;"></div></div></td>
+                </tr>
+              
+              <tr data-dc-tpl="110" style="background: rgb(247, 249, 246);"><td data-dc-tpl="111" style="font-weight: 800;">Total</td><td data-dc-tpl="112" class="num" style="font-weight: 800;"><span class="sc-interp">Rp 5.300.000</span></td><td data-dc-tpl="113" class="num" style="font-weight: 800;"><span class="sc-interp">Rp 3.100.000</span></td><td data-dc-tpl="114" class="num" style="font-weight: 800; color: rgb(31, 90, 39);"><span class="sc-interp">+Rp 2.200.000</span></td><td data-dc-tpl="115"><span data-dc-tpl="116" style="display: inline-flex; gap: 10px; font: 600 12px / 1 Inter, sans-serif;"><span data-dc-tpl="117" style="display: inline-flex; align-items: center; gap: 4px;"><span data-dc-tpl="118" style="width: 10px; height: 10px; border-radius: 2px; background: rgb(47, 125, 58);"></span>Masuk</span><span data-dc-tpl="119" style="display: inline-flex; align-items: center; gap: 4px;"><span data-dc-tpl="120" style="width: 10px; height: 10px; border-radius: 2px; background: rgb(227, 154, 59);"></span>Keluar</span></span></td></tr>
+            </tbody>
+          </table>
+        </section>
+        <section data-dc-tpl="121" class="card" style="grid-column: span 4; padding: 16px; display: flex; flex-direction: column; gap: 12px;">
+          <h2 data-dc-tpl="122" class="h2">Pengeluaran per kategori</h2>
+          
+            <div data-dc-tpl="124">
+              <div data-dc-tpl="125" style="display: flex; justify-content: space-between; font: 600 14px / 1.3 Inter, sans-serif;"><span data-dc-tpl="126"><span class="sc-interp">Pupuk</span></span><span data-dc-tpl="127" style="font-variant-numeric: tabular-nums;"><span class="sc-interp">Rp 1.240.000</span></span></div>
+              <div data-dc-tpl="128" style="height: 8px; border-radius: 4px; background: rgb(238, 241, 237); margin-top: 6px;"><div data-dc-tpl="129" style="height: 8px; border-radius: 4px; background: rgb(227, 154, 59); width: 100%;"></div></div>
+            </div>
+          
+            <div data-dc-tpl="124">
+              <div data-dc-tpl="125" style="display: flex; justify-content: space-between; font: 600 14px / 1.3 Inter, sans-serif;"><span data-dc-tpl="126"><span class="sc-interp">Tenaga kerja</span></span><span data-dc-tpl="127" style="font-variant-numeric: tabular-nums;"><span class="sc-interp">Rp 960.000</span></span></div>
+              <div data-dc-tpl="128" style="height: 8px; border-radius: 4px; background: rgb(238, 241, 237); margin-top: 6px;"><div data-dc-tpl="129" style="height: 8px; border-radius: 4px; background: rgb(227, 154, 59); width: 77%;"></div></div>
+            </div>
+          
+            <div data-dc-tpl="124">
+              <div data-dc-tpl="125" style="display: flex; justify-content: space-between; font: 600 14px / 1.3 Inter, sans-serif;"><span data-dc-tpl="126"><span class="sc-interp">Pestisida &amp; fungisida</span></span><span data-dc-tpl="127" style="font-variant-numeric: tabular-nums;"><span class="sc-interp">Rp 610.000</span></span></div>
+              <div data-dc-tpl="128" style="height: 8px; border-radius: 4px; background: rgb(238, 241, 237); margin-top: 6px;"><div data-dc-tpl="129" style="height: 8px; border-radius: 4px; background: rgb(227, 154, 59); width: 49%;"></div></div>
+            </div>
+          
+            <div data-dc-tpl="124">
+              <div data-dc-tpl="125" style="display: flex; justify-content: space-between; font: 600 14px / 1.3 Inter, sans-serif;"><span data-dc-tpl="126"><span class="sc-interp">Lainnya</span></span><span data-dc-tpl="127" style="font-variant-numeric: tabular-nums;"><span class="sc-interp">Rp 290.000</span></span></div>
+              <div data-dc-tpl="128" style="height: 8px; border-radius: 4px; background: rgb(238, 241, 237); margin-top: 6px;"><div data-dc-tpl="129" style="height: 8px; border-radius: 4px; background: rgb(227, 154, 59); width: 23%;"></div></div>
+            </div>
+          
+        </section>
+      </div>
+
+      <section data-dc-tpl="130" class="card" style="overflow: hidden;">
+        <div data-dc-tpl="131" style="padding: 16px 16px 12px; display: flex; align-items: center; gap: 10px;">
+          <h2 data-dc-tpl="132" class="h2" style="flex: 1 1 0%;">Transaksi</h2>
+          <button data-dc-tpl="133" class="sel">Pemilik: Semua<svg data-dc-tpl="134" class="i" viewBox="0 0 24 24" aria-hidden="true" style="width: 16px; height: 16px;"><path data-dc-tpl="135" d="M6 9l6 6 6-6"></path></svg></button>
+          <button data-dc-tpl="136" class="sel">Jenis: Semua<svg data-dc-tpl="137" class="i" viewBox="0 0 24 24" aria-hidden="true" style="width: 16px; height: 16px;"><path data-dc-tpl="138" d="M6 9l6 6 6-6"></path></svg></button>
+        </div>
+        <table data-dc-tpl="139" style="width: 100%; border-collapse: collapse;">
+          <thead data-dc-tpl="140"><tr data-dc-tpl="141"><th data-dc-tpl="142">Tanggal</th><th data-dc-tpl="143">Pemilik data</th><th data-dc-tpl="144">Keterangan</th><th data-dc-tpl="145">Jenis</th><th data-dc-tpl="146" class="num">Nominal</th></tr></thead>
+          <tbody data-dc-tpl="147">
+            
+              <tr data-dc-tpl="149"><td data-dc-tpl="150"><span class="sc-interp">Jum, 30 Okt</span></td><td data-dc-tpl="151"><span data-dc-tpl="152" class="badge b-gray"><span class="sc-interp">Pak Jaka · GH-01</span></span></td><td data-dc-tpl="153"><span class="sc-interp">Penjualan panen 41 kg × Rp 32.000</span></td><td data-dc-tpl="154"><span data-dc-tpl="155" class="badge b-green"><span class="sc-interp">Pemasukan</span></span></td><td data-dc-tpl="156" class="num" style="font-weight: 700; color: rgb(31, 90, 39);"><span class="sc-interp">+Rp 1.312.000</span></td></tr>
+            
+              <tr data-dc-tpl="149"><td data-dc-tpl="150"><span class="sc-interp">Kam, 29 Okt</span></td><td data-dc-tpl="151"><span data-dc-tpl="152" class="badge b-gray"><span class="sc-interp">Pak Indra · GH-02</span></span></td><td data-dc-tpl="153"><span class="sc-interp">Penjualan panen 44 kg × Rp 32.000</span></td><td data-dc-tpl="154"><span data-dc-tpl="155" class="badge b-green"><span class="sc-interp">Pemasukan</span></span></td><td data-dc-tpl="156" class="num" style="font-weight: 700; color: rgb(31, 90, 39);"><span class="sc-interp">+Rp 1.408.000</span></td></tr>
+            
+              <tr data-dc-tpl="149"><td data-dc-tpl="150"><span class="sc-interp">Rab, 28 Okt</span></td><td data-dc-tpl="151"><span data-dc-tpl="152" class="badge b-gray"><span class="sc-interp">Pak Jaka · GH-01</span></span></td><td data-dc-tpl="153"><span class="sc-interp">Penjualan panen 36,5 kg × Rp 32.000</span></td><td data-dc-tpl="154"><span data-dc-tpl="155" class="badge b-green"><span class="sc-interp">Pemasukan</span></span></td><td data-dc-tpl="156" class="num" style="font-weight: 700; color: rgb(31, 90, 39);"><span class="sc-interp">+Rp 1.168.000</span></td></tr>
+            
+              <tr data-dc-tpl="149"><td data-dc-tpl="150"><span class="sc-interp">Sen, 26 Okt</span></td><td data-dc-tpl="151"><span data-dc-tpl="152" class="badge b-gray"><span class="sc-interp">Pak Ari · GH-03</span></span></td><td data-dc-tpl="153"><span class="sc-interp">Pupuk dasar dan kapur</span></td><td data-dc-tpl="154"><span data-dc-tpl="155" class="badge b-gray"><span class="sc-interp">Pengeluaran</span></span></td><td data-dc-tpl="156" class="num" style="font-weight: 700; color: rgb(23, 35, 26);"><span class="sc-interp">−Rp 330.000</span></td></tr>
+            
+              <tr data-dc-tpl="149"><td data-dc-tpl="150"><span class="sc-interp">Min, 25 Okt</span></td><td data-dc-tpl="151"><span data-dc-tpl="152" class="badge b-gray"><span class="sc-interp">Pak Jaka · GH-01</span></span></td><td data-dc-tpl="153"><span class="sc-interp">Fungisida 1 liter</span></td><td data-dc-tpl="154"><span data-dc-tpl="155" class="badge b-gray"><span class="sc-interp">Pengeluaran</span></span></td><td data-dc-tpl="156" class="num" style="font-weight: 700; color: rgb(23, 35, 26);"><span class="sc-interp">−Rp 185.000</span></td></tr>
+            
+              <tr data-dc-tpl="149"><td data-dc-tpl="150"><span class="sc-interp">Sab, 24 Okt</span></td><td data-dc-tpl="151"><span data-dc-tpl="152" class="badge b-gray"><span class="sc-interp">Pak Jaka · GH-01</span></span></td><td data-dc-tpl="153"><span class="sc-interp">Upah tenaga harian 2 orang</span></td><td data-dc-tpl="154"><span data-dc-tpl="155" class="badge b-gray"><span class="sc-interp">Pengeluaran</span></span></td><td data-dc-tpl="156" class="num" style="font-weight: 700; color: rgb(23, 35, 26);"><span class="sc-interp">−Rp 240.000</span></td></tr>
+            
+          </tbody>
+        </table>
+        <div data-dc-tpl="157" class="src" style="padding: 12px 16px; border-top: 1px solid rgb(238, 241, 237);">Menampilkan 6 dari <span class="sc-interp">31</span> transaksi</div>
+      </section>
+    </div>
+  </main></div>
+</body>
+</html>

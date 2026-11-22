@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1440">
+<title>K01 Kondisi Antarmuka</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" data-dc-tpl="1">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" data-dc-tpl="2">
+<style>
+
+body{margin:0;font-family:'Inter',system-ui,sans-serif;color:#17231A;background:#F3F6F2}
+a{color:#23602C}a:hover{color:#17231A}
+*{box-sizing:border-box}
+.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.card{background:#fff;border:1px solid #E1E7DF;border-radius:14px;box-shadow:0 1px 2px rgba(23,35,26,.05)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 18px;border-radius:12px;font:600 16px/1 'Inter',sans-serif;border:1px solid transparent;cursor:pointer;text-decoration:none;white-space:nowrap}
+.btn-p{background:#2F7D3A;color:#fff}.btn-p:hover{background:#23602C;color:#fff}
+.btn-s{background:#fff;color:#17231A;border-color:#C9D3C6}.btn-s:hover{color:#17231A;background:#F3F6F2}
+.badge{display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px;border-radius:999px;font:600 13px/1 'Inter',sans-serif;white-space:nowrap}
+.b-teal{background:#DDF1EF;color:#0E5F5C}.b-amber{background:#FFF1CC;color:#6E4600}.b-gray{background:#EEF1ED;color:#46524A}
+.muted{color:#56645A}.src{font:500 12px/1.4 'Inter',sans-serif;color:#56645A}
+.panel{display:flex;flex-direction:column;gap:12px}
+.ptitle{display:flex;align-items:center;gap:10px;font:700 16px/1.3 'Inter',sans-serif}
+.pnum{width:28px;height:28px;border-radius:14px;background:#17231A;color:#fff;display:flex;align-items:center;justify-content:center;font:700 13px/1 'Inter',sans-serif}
+.screen{height:360px;border-radius:20px;background:#F3F6F2;border:1px solid #D5DED3;overflow:hidden;display:flex;flex-direction:column}
+.bar{height:56px;flex:none;display:flex;align-items:center;gap:10px;padding:0 14px;background:#fff;border-bottom:1px solid #E1E7DF;font:700 16px/1.2 'Inter',sans-serif}
+.sk{background:#E4EAE2;border-radius:8px}
+
+html,body{margin:0;width:1440px;height:1000px}
+</style>
+</head>
+<body>
+<div data-dc-tpl="4" style="width: 1440px; height: 1000px; background: rgb(243, 246, 242); padding: 40px 48px; display: flex; flex-direction: column; gap: 28px;">
+  <div data-dc-tpl="5" style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px;">
+    <div data-dc-tpl="6">
+      <h1 data-dc-tpl="7" style="margin: 0px; font: 800 28px / 1.2 Inter, sans-serif;">Kondisi antarmuka</h1>
+      <p data-dc-tpl="8" style="margin: 6px 0px 0px; font: 500 15px / 1.5 Inter, sans-serif; color: rgb(70, 82, 74);">Contoh keadaan yang dipakai di semua layar. Validasi dan gagal simpan ada di P07, simpan berhasil ada di P05 dan P08.</p>
+    </div>
+    <div data-dc-tpl="9" style="display: flex; gap: 8px;"><span data-dc-tpl="10" class="badge b-gray">Mobile 390 px</span><span data-dc-tpl="11" class="badge b-gray">Komponen sama untuk desktop</span></div>
+  </div>
+
+  <div data-dc-tpl="12" style="display: grid; grid-template-columns: repeat(3, minmax(0px, 1fr)); gap: 28px 32px;">
+    <div data-dc-tpl="13" class="panel">
+      <div data-dc-tpl="14" class="ptitle"><span data-dc-tpl="15" class="pnum">1</span>Memuat data</div>
+      <div data-dc-tpl="16" class="screen" aria-busy="true">
+        <div data-dc-tpl="17" class="bar">Beranda</div>
+        <div data-dc-tpl="18" style="padding: 16px; display: flex; flex-direction: column; gap: 12px;">
+          <div data-dc-tpl="19" class="sk" style="height: 26px; width: 70%;"></div>
+          <div data-dc-tpl="20" class="sk" style="height: 14px; width: 55%;"></div>
+          <div data-dc-tpl="21" class="card" style="padding: 14px; display: flex; flex-direction: column; gap: 10px; box-shadow: none;"><div data-dc-tpl="22" class="sk" style="height: 16px; width: 45%;"></div><div data-dc-tpl="23" class="sk" style="height: 44px;"></div><div data-dc-tpl="24" class="sk" style="height: 44px;"></div></div>
+          <div data-dc-tpl="25" class="card" style="padding: 14px; display: grid; grid-template-columns: repeat(2, minmax(0px, 1fr)); gap: 10px; box-shadow: none;"><div data-dc-tpl="26" class="sk" style="height: 84px;"></div><div data-dc-tpl="27" class="sk" style="height: 84px;"></div></div>
+          <div data-dc-tpl="28" class="src" style="text-align: center; font-size: 13px;">Mengambil data dari Dr. Greenhouse…</div>
+        </div>
+      </div>
+    </div>
+
+    <div data-dc-tpl="29" class="panel">
+      <div data-dc-tpl="30" class="ptitle"><span data-dc-tpl="31" class="pnum">2</span>Data kosong</div>
+      <div data-dc-tpl="32" class="screen">
+        <div data-dc-tpl="33" class="bar">Keuangan Saya</div>
+        <div data-dc-tpl="34" style="padding: 16px; display: flex; flex-direction: column; gap: 12px;">
+          <div data-dc-tpl="35" class="card" style="padding: 14px; box-shadow: none; display: grid; grid-template-columns: repeat(3, minmax(0px, 1fr)); gap: 8px;">
+            <div data-dc-tpl="36"><div data-dc-tpl="37" class="src">Pemasukan</div><div data-dc-tpl="38" style="font: 700 15px / 1.3 Inter, sans-serif; color: rgb(86, 100, 90); margin-top: 4px;">—</div></div>
+            <div data-dc-tpl="39"><div data-dc-tpl="40" class="src">Pengeluaran</div><div data-dc-tpl="41" style="font: 700 15px / 1.3 Inter, sans-serif; color: rgb(86, 100, 90); margin-top: 4px;">—</div></div>
+            <div data-dc-tpl="42"><div data-dc-tpl="43" class="src">Selisih</div><div data-dc-tpl="44" style="font: 700 15px / 1.3 Inter, sans-serif; color: rgb(86, 100, 90); margin-top: 4px;">—</div></div>
+          </div>
+          <div data-dc-tpl="45" style="flex: 1 1 0%; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; padding: 18px 12px;">
+            <div data-dc-tpl="46" style="width: 56px; height: 56px; border-radius: 16px; background: rgb(230, 242, 231); color: rgb(31, 90, 39); display: flex; align-items: center; justify-content: center;"><svg data-dc-tpl="47" class="i" viewBox="0 0 24 24" aria-hidden="true" style="width: 28px; height: 28px;"><path data-dc-tpl="48" d="M4 7.5A2.5 2.5 0 0 1 6.5 5H18v3M4 7.5V18a2 2 0 0 0 2 2h14V8H6.5A2.5 2.5 0 0 1 4 7.5ZM16 14h1.5"></path></svg></div>
+            <div data-dc-tpl="49" style="font: 700 16px / 1.35 Inter, sans-serif;">Belum ada transaksi pada periode ini</div>
+            <div data-dc-tpl="50" class="muted" style="font: 500 13px / 1.45 Inter, sans-serif;">Tanda “—” berarti belum ada catatan, bukan Rp 0.</div>
+            <button data-dc-tpl="51" class="btn btn-p" style="min-height: 44px;">Catat Keuangan</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-dc-tpl="52" class="panel">
+      <div data-dc-tpl="53" class="ptitle"><span data-dc-tpl="54" class="pnum">3</span>Dr. Greenhouse tidak bisa dihubungi</div>
+      <div data-dc-tpl="55" class="screen">
+        <div data-dc-tpl="56" class="bar">Aktivitas Saya</div>
+        <div data-dc-tpl="57" style="padding: 16px; display: flex; flex-direction: column; gap: 12px;">
+          <div data-dc-tpl="58" role="alert" style="padding: 12px; border-radius: 12px; background: rgb(251, 233, 230); border: 1px solid rgb(242, 201, 194); display: flex; flex-direction: column; gap: 10px;">
+            <div data-dc-tpl="59" style="display: flex; gap: 10px; align-items: flex-start;"><svg data-dc-tpl="60" class="i" viewBox="0 0 24 24" aria-hidden="true" style="color: rgb(158, 42, 28); width: 22px; height: 22px;"><path data-dc-tpl="61" d="M3 3l18 18M8.5 16.5a5 5 0 0 1 7 0M5 13a10 10 0 0 1 5-2.7M14.5 10.4A10 10 0 0 1 19 13M2 9.5a14.5 14.5 0 0 1 4.6-2.8M10.8 5.6A14.5 14.5 0 0 1 22 9.5M12 20h.01"></path></svg><div data-dc-tpl="62"><div data-dc-tpl="63" style="font: 700 14px / 1.35 Inter, sans-serif; color: rgb(158, 42, 28);">Belum terhubung ke Dr. Greenhouse</div><div data-dc-tpl="64" style="font: 500 13px / 1.45 Inter, sans-serif;">Menampilkan data terakhir Sel, 3 Nov 07.52 WIB. Catatan baru tetap bisa dibuat dan dikirim nanti.</div></div></div>
+            <button data-dc-tpl="65" class="btn btn-s" style="min-height: 40px; font-size: 14px;"><svg data-dc-tpl="66" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="67" d="M20 11a8 8 0 0 0-14.6-4.5M4 4v3.5h3.5M4 13a8 8 0 0 0 14.6 4.5M20 20v-3.5h-3.5"></path></svg>Coba lagi</button>
+          </div>
+          <div data-dc-tpl="68" class="card" style="padding: 12px; box-shadow: none; display: flex; gap: 10px; align-items: center; opacity: 0.75;">
+            <div data-dc-tpl="69" style="width: 40px; height: 40px; border-radius: 12px; background: rgb(230, 242, 231); color: rgb(31, 90, 39); display: flex; align-items: center; justify-content: center;"><svg data-dc-tpl="70" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="71" d="M6 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM6 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM8.1 7.9 20 18M8.1 16.1 20 6"></path></svg></div>
+            <div data-dc-tpl="72" style="flex: 1 1 0%;"><div data-dc-tpl="73" style="font: 600 15px / 1.3 Inter, sans-serif;">Pemangkasan tunas air</div><div data-dc-tpl="74" class="src">Sen, 2 Nov · 09.40 WIB</div></div>
+          </div>
+          <div data-dc-tpl="75" class="card" style="padding: 12px; box-shadow: none; display: flex; gap: 10px; align-items: center; border-style: dashed;">
+            <div data-dc-tpl="76" style="width: 40px; height: 40px; border-radius: 12px; background: rgb(251, 233, 230); color: rgb(158, 42, 28); display: flex; align-items: center; justify-content: center;"><svg data-dc-tpl="77" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="78" d="M4 10h16l-1.5 9a1.5 1.5 0 0 1-1.5 1.3H7a1.5 1.5 0 0 1-1.5-1.3ZM8 10l3-6M16 10l-3-6M9 14v3M15 14v3"></path></svg></div>
+            <div data-dc-tpl="79" style="flex: 1 1 0%;"><div data-dc-tpl="80" style="font: 600 15px / 1.3 Inter, sans-serif;">Panen · 36 kg</div><div data-dc-tpl="81" class="src">Menunggu dikirim</div></div>
+            <span data-dc-tpl="82" class="badge b-amber">Belum terkirim</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-dc-tpl="83" class="panel">
+      <div data-dc-tpl="84" class="ptitle"><span data-dc-tpl="85" class="pnum">4</span>Data cuaca belum diperbarui</div>
+      <div data-dc-tpl="86" class="screen">
+        <div data-dc-tpl="87" class="bar">Cuaca</div>
+        <div data-dc-tpl="88" style="padding: 16px; display: flex; flex-direction: column; gap: 12px;">
+          <div data-dc-tpl="89" class="card" style="padding: 14px; box-shadow: none; display: flex; flex-direction: column; gap: 10px; border-color: rgb(232, 216, 168);">
+            <div data-dc-tpl="90" style="display: flex; justify-content: space-between; align-items: center;"><span data-dc-tpl="91" style="font: 700 16px / 1.3 Inter, sans-serif;">Hasil ukur di kebun</span><span data-dc-tpl="92" class="badge b-teal">AWS Agrotani</span></div>
+            <div data-dc-tpl="93" style="display: grid; grid-template-columns: repeat(2, minmax(0px, 1fr)); gap: 8px;">
+              <div data-dc-tpl="94" style="padding: 10px; border-radius: 10px; background: rgb(243, 246, 242);"><div data-dc-tpl="95" class="src">Suhu</div><div data-dc-tpl="96" style="font: 800 20px / 1.2 Inter, sans-serif; color: rgb(86, 100, 90);">16,3°C</div></div>
+              <div data-dc-tpl="97" style="padding: 10px; border-radius: 10px; background: rgb(243, 246, 242);"><div data-dc-tpl="98" class="src">Kelembapan</div><div data-dc-tpl="99" style="font: 800 20px / 1.2 Inter, sans-serif; color: rgb(86, 100, 90);">93%</div></div>
+            </div>
+            <div data-dc-tpl="100" style="display: flex; gap: 8px; align-items: flex-start; padding: 10px; border-radius: 10px; background: rgb(255, 241, 204); font: 600 13px / 1.45 Inter, sans-serif; color: rgb(74, 51, 0);"><svg data-dc-tpl="101" class="i" viewBox="0 0 24 24" aria-hidden="true" style="width: 18px; height: 18px; color: rgb(110, 70, 0);"><path data-dc-tpl="102" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18ZM12 7v5l3 2"></path></svg><span data-dc-tpl="103">Data terakhir 3 jam lalu (04.30 WIB). Bukan kondisi saat ini. Alat ukur mungkin sedang tidak mengirim data.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-dc-tpl="104" class="panel">
+      <div data-dc-tpl="105" class="ptitle"><span data-dc-tpl="106" class="pnum">5</span>Akses ditolak</div>
+      <div data-dc-tpl="107" class="screen">
+        <div data-dc-tpl="108" class="bar">Keuangan</div>
+        <div data-dc-tpl="109" style="flex: 1 1 0%; padding: 24px 20px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; justify-content: center;">
+          <div data-dc-tpl="110" style="width: 60px; height: 60px; border-radius: 18px; background: rgb(238, 241, 237); color: rgb(70, 82, 74); display: flex; align-items: center; justify-content: center;"><svg data-dc-tpl="111" class="i" viewBox="0 0 24 24" aria-hidden="true" style="width: 30px; height: 30px;"><path data-dc-tpl="112" d="M6 11h12v9H6zM8.5 11V8a3.5 3.5 0 0 1 7 0v3"></path></svg></div>
+          <div data-dc-tpl="113" style="font: 700 17px / 1.35 Inter, sans-serif;">Data ini milik petani lain</div>
+          <div data-dc-tpl="114" class="muted" style="font: 500 14px / 1.5 Inter, sans-serif;">Bapak hanya dapat melihat dan mengubah data keuangan GH-01 milik Bapak sendiri.</div>
+          <button data-dc-tpl="115" class="btn btn-p">Ke Keuangan Saya</button>
+        </div>
+      </div>
+    </div>
+
+    <div data-dc-tpl="116" class="panel">
+      <div data-dc-tpl="117" class="ptitle"><span data-dc-tpl="118" class="pnum">6</span>Bantuan pada halaman</div>
+      <div data-dc-tpl="119" class="screen" style="position: relative;">
+        <div data-dc-tpl="120" class="bar">Jadwal Tanam</div>
+        <div data-dc-tpl="121" style="padding: 16px; opacity: 0.35;"><div data-dc-tpl="122" class="sk" style="height: 120px;"></div></div>
+        <div data-dc-tpl="123" style="position: absolute; inset: 0px; background: rgba(23, 35, 26, 0.35);"></div>
+        <div data-dc-tpl="124" role="dialog" aria-label="Bantuan Jadwal Tanam" style="position: absolute; left: 0px; right: 0px; bottom: 0px; background: rgb(255, 255, 255); border-radius: 20px 20px 0px 0px; padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 10px;">
+          <div data-dc-tpl="125" style="width: 40px; height: 4px; border-radius: 2px; background: rgb(201, 211, 198); align-self: center;"></div>
+          <div data-dc-tpl="126" style="font: 800 17px / 1.3 Inter, sans-serif;">Arti istilah di halaman ini</div>
+          <div data-dc-tpl="127" style="font: 500 14px / 1.5 Inter, sans-serif;"><strong data-dc-tpl="128">HST</strong> · hari setelah tanam. Dihitung sejak bibit dipindah ke greenhouse.</div>
+          <div data-dc-tpl="129" style="font: 500 14px / 1.5 Inter, sans-serif;"><strong data-dc-tpl="130">Tanggal target</strong> · hari kegiatan sebaiknya dikerjakan.</div>
+          <div data-dc-tpl="131" style="font: 500 14px / 1.5 Inter, sans-serif; display: flex; align-items: center; gap: 8px;"><span data-dc-tpl="132" style="display: inline-flex; align-items: center; height: 22px; padding: 0px 8px; border-radius: 11px; background: rgb(251, 233, 230); color: rgb(158, 42, 28); font: 600 12px / 1 Inter, sans-serif;">Terlambat</span>sudah lewat dari tanggal target.</div>
+          <button data-dc-tpl="133" class="btn btn-s" style="min-height: 44px;">Mengerti</button>
+        </div>
+      </div>
+    </div>
+  </div></div>
+</body>
+</html>

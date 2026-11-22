@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1440">
+<title>M01 Dasbor Manajemen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" data-dc-tpl="1">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" data-dc-tpl="2">
+<style>
+
+body{margin:0;font-family:'Inter',system-ui,sans-serif;color:#17231A;background:#F3F6F2}
+a{color:#23602C}a:hover{color:#17231A}
+*{box-sizing:border-box}
+.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.card{background:#fff;border:1px solid #E1E7DF;border-radius:14px;box-shadow:0 1px 2px rgba(23,35,26,.05)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 16px;border-radius:12px;font:600 15px/1 'Inter',sans-serif;border:1px solid transparent;cursor:pointer;text-decoration:none;white-space:nowrap}
+.btn-p{background:#2F7D3A;color:#fff}.btn-p:hover{background:#23602C;color:#fff}
+.btn-s{background:#fff;color:#17231A;border-color:#C9D3C6}.btn-s:hover{color:#17231A;background:#F3F6F2}
+.badge{display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px;border-radius:999px;font:600 13px/1 'Inter',sans-serif;white-space:nowrap}
+.b-green{background:#E6F2E7;color:#1F5A27}.b-red{background:#FBE9E6;color:#9E2A1C}.b-amber{background:#FFF1CC;color:#6E4600}
+.b-blue{background:#E7EFFA;color:#1A4F8C}.b-teal{background:#DDF1EF;color:#0E5F5C}.b-gray{background:#EEF1ED;color:#46524A}
+.muted{color:#56645A}.src{font:500 12px/1.4 'Inter',sans-serif;color:#56645A}
+.h2{margin:0;font:700 17px/1.3 'Inter',sans-serif}
+.snav{display:flex;align-items:center;gap:12px;height:44px;padding:0 12px;border-radius:10px;font:600 15px/1 'Inter',sans-serif;color:#46524A;text-decoration:none}
+.snav:hover{background:#F3F6F2;color:#17231A}.snav.on{background:#E6F2E7;color:#1F5A27}
+.sel{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 14px;border-radius:12px;border:1px solid #C9D3C6;background:#fff;font:600 14px/1 'Inter',sans-serif;color:#17231A}
+.iconbtn{width:44px;height:44px;border-radius:12px;border:1px solid #E1E7DF;background:#fff;color:#46524A;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;position:relative}
+.kpi{padding:18px;display:flex;flex-direction:column;gap:6px}
+.kl{font:600 14px/1.3 'Inter',sans-serif;color:#46524A;display:flex;align-items:center;gap:8px}
+.kv{font:800 28px/1.15 'Inter',sans-serif}
+
+html,body{margin:0;width:1440px;height:1140px}
+</style>
+</head>
+<body>
+<div data-dc-tpl="4" style="width: 1440px; height: 1140px; display: flex; background: rgb(243, 246, 242);">
+  <aside data-dc-tpl="5" style="width: 248px; flex: 0 0 auto; background: rgb(255, 255, 255); border-right: 1px solid rgb(225, 231, 223); display: flex; flex-direction: column; padding: 20px 14px; gap: 4px;">
+    <div data-dc-tpl="6" style="display: flex; align-items: center; gap: 10px; padding: 0px 6px 20px;">
+      <svg data-dc-tpl="7" width="38" height="38" viewBox="0 0 36 36" role="img" aria-label="Logo Dr. Greenhouse Pendamping"><rect data-dc-tpl="8" width="36" height="36" rx="10" fill="#2F7D3A"></rect><path data-dc-tpl="9" d="M10 25c0-8 5-13 15-14 0 9-5 14-14 14Zm0 0 7-7" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path><circle data-dc-tpl="10" cx="26.5" cy="25.5" r="3.5" fill="#E8604E"></circle></svg>
+      <div data-dc-tpl="11"><div data-dc-tpl="12" style="font: 800 16px / 1.2 Inter, sans-serif;">Dr. Greenhouse</div><div data-dc-tpl="13" class="src">Pendamping · Agrotani</div></div>
+    </div>
+    <a data-dc-tpl="14" class="snav on" href="M01-Dasbor.dc.html" aria-current="page"><svg data-dc-tpl="15" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="16" d="M3 10.5 12 3l9 7.5M5 9.5V20h5v-6h4v6h5V9.5"></path></svg>Dasbor</a>
+    <a data-dc-tpl="17" class="snav" href="M02-LogAktivitas.dc.html"><svg data-dc-tpl="18" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="19" d="M9 4h6v3H9zM9 5.5H6.5A1.5 1.5 0 0 0 5 7v12.5A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5V7a1.5 1.5 0 0 0-1.5-1.5H15M8.5 12h7M8.5 16h5"></path></svg>Log Aktivitas</a>
+    <a data-dc-tpl="20" class="snav" href="M03-Keuangan.dc.html"><svg data-dc-tpl="21" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="22" d="M4 7.5A2.5 2.5 0 0 1 6.5 5H18v3M4 7.5V18a2 2 0 0 0 2 2h14V8H6.5A2.5 2.5 0 0 1 4 7.5ZM16 14h1.5"></path></svg>Keuangan</a>
+    <a data-dc-tpl="23" class="snav" href="M04-JadwalTanam.dc.html"><svg data-dc-tpl="24" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="25" d="M4 6.5A1.5 1.5 0 0 1 5.5 5h13A1.5 1.5 0 0 1 20 6.5v12a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5ZM4 10h16M8 3v4M16 3v4"></path></svg>Jadwal Tanam</a>
+    <a data-dc-tpl="26" class="snav" href="M05-Macroclimate.dc.html"><svg data-dc-tpl="27" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="28" d="M7 18a4 4 0 0 1-.5-7.97A5.5 5.5 0 0 1 17.2 9 4.5 4.5 0 0 1 17 18Z"></path></svg>Macroclimate</a>
+    <div data-dc-tpl="29" style="flex: 1 1 0%;"></div>
+    <a data-dc-tpl="30" class="snav" href="P01-Onboarding.dc.html"><svg data-dc-tpl="31" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="32" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18ZM9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17h.01"></path></svg>Bantuan</a>
+    <div data-dc-tpl="33" style="display: flex; align-items: center; gap: 10px; padding: 12px 8px 0px; border-top: 1px solid rgb(238, 241, 237); margin-top: 8px;">
+      <div data-dc-tpl="34" style="width: 38px; height: 38px; border-radius: 19px; background: rgb(23, 35, 26); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; font: 700 14px / 1 Inter, sans-serif;">PF</div>
+      <div data-dc-tpl="35"><div data-dc-tpl="36" style="font: 700 14px / 1.3 Inter, sans-serif;">Pak Ferry</div><div data-dc-tpl="37" class="src">Manajemen</div></div>
+    </div>
+  </aside>
+
+  <main data-dc-tpl="38" style="flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column;">
+    <header data-dc-tpl="39" style="height: 72px; flex: 0 0 auto; background: rgb(255, 255, 255); border-bottom: 1px solid rgb(225, 231, 223); display: flex; align-items: center; gap: 12px; padding: 0px 32px;">
+      <div data-dc-tpl="40" style="flex: 1 1 0%;">
+        <h1 data-dc-tpl="41" style="margin: 0px; font: 800 22px / 1.2 Inter, sans-serif;">Dasbor</h1>
+        <div data-dc-tpl="42" class="src" style="display: flex; align-items: center; gap: 6px; margin-top: 2px;"><span data-dc-tpl="43" style="width: 8px; height: 8px; border-radius: 4px; background: rgb(47, 125, 58);"></span>Data Dr. Greenhouse diperbarui 07.52 WIB · Sel, 3 Nov 2026</div>
+      </div>
+      <button data-dc-tpl="44" class="sel"><svg data-dc-tpl="45" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="46" d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14ZM5 19l7-7"></path></svg>Semua greenhouse<svg data-dc-tpl="47" class="i" viewBox="0 0 24 24" aria-hidden="true" style="width: 16px; height: 16px;"><path data-dc-tpl="48" d="M6 9l6 6 6-6"></path></svg></button>
+      <button data-dc-tpl="49" class="iconbtn" aria-label="Pengingat, 2 baru"><svg data-dc-tpl="50" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="51" d="M6 16V11a6 6 0 1 1 12 0v5l1.5 2h-15ZM10 20a2 2 0 0 0 4 0"></path></svg><span data-dc-tpl="52" style="position: absolute; top: 8px; right: 9px; width: 9px; height: 9px; border-radius: 5px; background: rgb(200, 64, 47); border: 2px solid rgb(255, 255, 255);"></span></button>
+      <a data-dc-tpl="53" class="btn btn-p" href="M06-AsistenAI.dc.html"><svg data-dc-tpl="54" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="55" d="M5 18.5 3.5 21V6.5A2.5 2.5 0 0 1 6 4h12a2.5 2.5 0 0 1 2.5 2.5v9A2.5 2.5 0 0 1 18 18H5.5ZM8 9.5h8M8 13h5"></path></svg>Tanya Asisten AI</a>
+    </header>
+
+    <div data-dc-tpl="56" style="padding: 28px 32px; display: flex; flex-direction: column; gap: 24px;">
+      <div data-dc-tpl="57" style="display: grid; grid-template-columns: repeat(4, minmax(0px, 1fr)); gap: 16px;">
+        <div data-dc-tpl="58" class="card kpi">
+          <div data-dc-tpl="59" class="kl"><svg data-dc-tpl="60" class="i" viewBox="0 0 24 24" aria-hidden="true" style="color: rgb(31, 90, 39);"><path data-dc-tpl="61" d="M9 4h6v3H9zM9 5.5H6.5A1.5 1.5 0 0 0 5 7v12.5A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5V7a1.5 1.5 0 0 0-1.5-1.5H15M8.5 12h7M8.5 16h5"></path></svg>Aktivitas tercatat · 7 hari</div>
+          <div data-dc-tpl="62" class="kv">23</div>
+          <div data-dc-tpl="63" class="src" style="font-size: 13px;">GH-01: 9 · GH-02: 10 · GH-03: 4</div>
+        </div>
+        <div data-dc-tpl="64" class="card kpi" style="border-color: rgb(242, 201, 194);">
+          <div data-dc-tpl="65" class="kl"><svg data-dc-tpl="66" class="i" viewBox="0 0 24 24" aria-hidden="true" style="color: rgb(158, 42, 28);"><path data-dc-tpl="67" d="M9 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7ZM2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 6.5M18 14c2 .7 3.5 2.8 3.5 6"></path></svg>Petani belum mencatat</div>
+          <div data-dc-tpl="68" class="kv" style="color: rgb(158, 42, 28);">1 petani</div>
+          <div data-dc-tpl="69" class="src" style="font-size: 13px;">Pak Ari (GH-03) · terakhir Jum, 30 Okt</div>
+        </div>
+        <div data-dc-tpl="70" class="card kpi">
+          <div data-dc-tpl="71" class="kl"><svg data-dc-tpl="72" class="i" viewBox="0 0 24 24" aria-hidden="true" style="color: rgb(31, 90, 39);"><path data-dc-tpl="73" d="M4 7.5A2.5 2.5 0 0 1 6.5 5H18v3M4 7.5V18a2 2 0 0 0 2 2h14V8H6.5A2.5 2.5 0 0 1 4 7.5ZM16 14h1.5"></path></svg>Selisih November (berjalan)</div>
+          <div data-dc-tpl="74" class="kv">+Rp 1.441.000</div>
+          <div data-dc-tpl="75" class="src" style="font-size: 13px;">Masuk Rp 2.176.000 · Keluar Rp 735.000</div>
+        </div>
+        <div data-dc-tpl="76" class="card kpi">
+          <div data-dc-tpl="77" class="kl"><svg data-dc-tpl="78" class="i" viewBox="0 0 24 24" aria-hidden="true" style="color: rgb(110, 70, 0);"><path data-dc-tpl="79" d="M4 6.5A1.5 1.5 0 0 1 5.5 5h13A1.5 1.5 0 0 1 20 6.5v12a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5ZM4 10h16M8 3v4M16 3v4"></path></svg>Jadwal mendekati target</div>
+          <div data-dc-tpl="80" class="kv">4 kegiatan</div>
+          <div data-dc-tpl="81" class="src" style="font-size: 13px; color: rgb(158, 42, 28); font-weight: 600;">1 terlambat dari tanggal target</div>
+        </div>
+      </div>
+
+      <div data-dc-tpl="82" style="display: grid; grid-template-columns: repeat(12, minmax(0px, 1fr)); gap: 16px;">
+        <section data-dc-tpl="83" class="card" style="grid-column: span 8; padding: 20px; display: flex; flex-direction: column; gap: 16px;">
+          <div data-dc-tpl="84" style="display: flex; align-items: center; gap: 12px;">
+            <h2 data-dc-tpl="85" class="h2" style="flex: 1 1 0%;">Pemasukan dan pengeluaran per bulan</h2>
+            <span data-dc-tpl="86" style="display: flex; align-items: center; gap: 6px; font: 600 13px / 1 Inter, sans-serif;"><span data-dc-tpl="87" style="width: 12px; height: 12px; border-radius: 3px; background: rgb(47, 125, 58);"></span>Pemasukan</span>
+            <span data-dc-tpl="88" style="display: flex; align-items: center; gap: 6px; font: 600 13px / 1 Inter, sans-serif;"><span data-dc-tpl="89" style="width: 12px; height: 12px; border-radius: 3px; background: rgb(227, 154, 59);"></span>Pengeluaran</span>
+            <a data-dc-tpl="90" href="M03-Keuangan.dc.html" style="font: 600 14px / 1 Inter, sans-serif; margin-left: 8px;">Rekap P&amp;L</a>
+          </div>
+          <div data-dc-tpl="91" style="display: flex; gap: 12px;">
+            <div data-dc-tpl="92" style="display: flex; flex-direction: column; justify-content: space-between; height: 220px; font: 500 12px / 1 Inter, sans-serif; color: rgb(86, 100, 90); text-align: right; width: 44px; padding-bottom: 0px;">
+              <span data-dc-tpl="93">6 jt</span><span data-dc-tpl="94">4 jt</span><span data-dc-tpl="95">2 jt</span><span data-dc-tpl="96">0</span>
+            </div>
+            <div data-dc-tpl="97" style="flex: 1 1 0%; display: grid; grid-template-columns: repeat(6, minmax(0px, 1fr)); gap: 12px; height: 220px; align-items: end; border-bottom: 1px solid rgb(201, 211, 198); background: linear-gradient(rgb(238, 241, 237) 1px, transparent 1px) 0px 0px / 100% 33.33%;">
+              
+                <div data-dc-tpl="99" style="display: flex; gap: 4px; align-items: end; justify-content: center; height: 100%;">
+                  <div data-dc-tpl="100" title="Pemasukan Rp 6,2 jt" style="width: 28px; height: 94%; background: rgb(47, 125, 58); border-radius: 4px 4px 0px 0px;"></div>
+                  <div data-dc-tpl="101" title="Pengeluaran Rp 3,4 jt" style="width: 28px; height: 52%; background: rgb(227, 154, 59); border-radius: 4px 4px 0px 0px;"></div>
+                </div>
+              
+                <div data-dc-tpl="99" style="display: flex; gap: 4px; align-items: end; justify-content: center; height: 100%;">
+                  <div data-dc-tpl="100" title="Pemasukan Rp 4,1 jt" style="width: 28px; height: 62%; background: rgb(47, 125, 58); border-radius: 4px 4px 0px 0px;"></div>
+                  <div data-dc-tpl="101" title="Pengeluaran Rp 3,9 jt" style="width: 28px; height: 59%; background: rgb(227, 154, 59); border-radius: 4px 4px 0px 0px;"></div>
+                </div>
+              
+                <div data-dc-tpl="99" style="display: flex; gap: 4px; align-items: end; justify-content: center; height: 100%;">
+                  <div data-dc-tpl="100" title="Pemasukan Rp 1,8 jt" style="width: 28px; height: 27%; background: rgb(47, 125, 58); border-radius: 4px 4px 0px 0px;"></div>
+                  <div data-dc-tpl="101" title="Pengeluaran Rp 4,2 jt" style="width: 28px; height: 64%; background: rgb(227, 154, 59); border-radius: 4px 4px 0px 0px;"></div>
+                </div>
+              
+                <div data-dc-tpl="99" style="display: flex; gap: 4px; align-items: end; justify-content: center; height: 100%;">
+                  <div data-dc-tpl="100" title="Pemasukan Rp 0,9 jt" style="width: 28px; height: 14%; background: rgb(47, 125, 58); border-radius: 4px 4px 0px 0px;"></div>
+                  <div data-dc-tpl="101" title="Pengeluaran Rp 3,6 jt" style="width: 28px; height: 55%; background: rgb(227, 154, 59); border-radius: 4px 4px 0px 0px;"></div>
+                </div>
+              
+                <div data-dc-tpl="99" style="display: flex; gap: 4px; align-items: end; justify-content: center; height: 100%;">
+                  <div data-dc-tpl="100" title="Pemasukan Rp 5,3 jt" style="width: 28px; height: 80%; background: rgb(47, 125, 58); border-radius: 4px 4px 0px 0px;"></div>
+                  <div data-dc-tpl="101" title="Pengeluaran Rp 3,1 jt" style="width: 28px; height: 47%; background: rgb(227, 154, 59); border-radius: 4px 4px 0px 0px;"></div>
+                </div>
+              
+                <div data-dc-tpl="99" style="display: flex; gap: 4px; align-items: end; justify-content: center; height: 100%;">
+                  <div data-dc-tpl="100" title="Pemasukan Rp 2,176 jt" style="width: 28px; height: 33%; background: rgb(47, 125, 58); border-radius: 4px 4px 0px 0px;"></div>
+                  <div data-dc-tpl="101" title="Pengeluaran Rp 0,735 jt" style="width: 28px; height: 11%; background: rgb(227, 154, 59); border-radius: 4px 4px 0px 0px;"></div>
+                </div>
+              
+            </div>
+          </div>
+          <div data-dc-tpl="102" style="display: flex; gap: 12px;">
+            <div data-dc-tpl="103" style="width: 44px;"></div>
+            <div data-dc-tpl="104" style="flex: 1 1 0%; display: grid; grid-template-columns: repeat(6, minmax(0px, 1fr)); gap: 12px; text-align: center; font: 600 13px / 1.3 Inter, sans-serif; color: rgb(70, 82, 74);">
+              <span data-dc-tpl="105">Jun</span><span data-dc-tpl="106">Jul</span><span data-dc-tpl="107">Agu</span><span data-dc-tpl="108">Sep</span><span data-dc-tpl="109">Okt</span><span data-dc-tpl="110">Nov<br data-dc-tpl="111"><span data-dc-tpl="112" class="src">1–3 Nov</span></span>
+            </div>
+          </div>
+        </section>
+
+        <section data-dc-tpl="113" class="card" style="grid-column: span 4; padding: 20px; display: flex; flex-direction: column; gap: 14px;">
+          <div data-dc-tpl="114" style="display: flex; align-items: center; justify-content: space-between;"><h2 data-dc-tpl="115" class="h2">Macroclimate hari ini</h2><a data-dc-tpl="116" href="M05-Macroclimate.dc.html" style="font: 600 14px / 1 Inter, sans-serif;">Detail</a></div>
+          <div data-dc-tpl="117" style="padding: 14px; border-radius: 12px; background: rgb(231, 239, 250); display: flex; gap: 12px; align-items: center;">
+            <svg data-dc-tpl="118" class="i" viewBox="0 0 24 24" aria-hidden="true" style="width: 34px; height: 34px; color: rgb(26, 79, 140);"><path data-dc-tpl="119" d="M7 15a4 4 0 0 1-.5-7.97A5.5 5.5 0 0 1 17.2 6 4.5 4.5 0 0 1 17 15ZM8 18l-1 3M12 18l-1 3M16 18l-1 3"></path></svg>
+            <div data-dc-tpl="120" style="flex: 1 1 0%;"><span data-dc-tpl="121" class="badge b-blue" style="background: rgb(255, 255, 255); height: 22px; font-size: 12px;">Prakiraan BMKG</span><div data-dc-tpl="122" style="font: 700 15px / 1.35 Inter, sans-serif; margin-top: 6px;">Hujan ringan siang · 16–23°C</div><div data-dc-tpl="123" class="src">Kec. Lembang · terbit 05.00 WIB</div></div>
+          </div>
+          <div data-dc-tpl="124" style="padding: 14px; border-radius: 12px; background: rgb(221, 241, 239); display: flex; gap: 12px; align-items: center;">
+            <svg data-dc-tpl="125" class="i" viewBox="0 0 24 24" aria-hidden="true" style="width: 34px; height: 34px; color: rgb(14, 95, 92);"><path data-dc-tpl="126" d="M10 13.5V5a2 2 0 0 1 4 0v8.5a4 4 0 1 1-4 0ZM12 9v7"></path></svg>
+            <div data-dc-tpl="127" style="flex: 1 1 0%;"><span data-dc-tpl="128" class="badge b-teal" style="background: rgb(255, 255, 255); height: 22px; font-size: 12px;">Pengamatan AWS</span><div data-dc-tpl="129" style="font: 700 15px / 1.35 Inter, sans-serif; margin-top: 6px;">18,4°C · RH 88% · hujan 0,0 mm</div><div data-dc-tpl="130" class="src">Luar GH-01 · 07.30 WIB</div></div>
+          </div>
+          <a data-dc-tpl="131" class="btn btn-s" href="M06-AsistenAI.dc.html" style="width: 100%;"><svg data-dc-tpl="132" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="133" d="M5 18.5 3.5 21V6.5A2.5 2.5 0 0 1 6 4h12a2.5 2.5 0 0 1 2.5 2.5v9A2.5 2.5 0 0 1 18 18H5.5ZM8 9.5h8M8 13h5"></path></svg>Minta ringkasan ke Asisten AI</a>
+        </section>
+      </div>
+
+      <div data-dc-tpl="134" style="display: grid; grid-template-columns: repeat(12, minmax(0px, 1fr)); gap: 16px;">
+        <section data-dc-tpl="135" class="card" style="grid-column: span 7; padding: 20px 20px 8px;">
+          <div data-dc-tpl="136" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;"><h2 data-dc-tpl="137" class="h2">Aktivitas terbaru</h2><a data-dc-tpl="138" href="M02-LogAktivitas.dc.html" style="font: 600 14px / 1 Inter, sans-serif;">Lihat semua</a></div>
+          <table data-dc-tpl="139" style="width: 100%; border-collapse: collapse; font: 500 14px / 1.4 Inter, sans-serif;">
+            <thead data-dc-tpl="140"><tr data-dc-tpl="141" style="text-align: left; color: rgb(86, 100, 90); font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em;"><th data-dc-tpl="142" style="padding: 10px 0px; font-weight: 600;">Waktu</th><th data-dc-tpl="143" style="font-weight: 600;">Petani</th><th data-dc-tpl="144" style="font-weight: 600;">Aktivitas</th><th data-dc-tpl="145" style="font-weight: 600;">Jumlah</th></tr></thead>
+            <tbody data-dc-tpl="146">
+              
+                <tr data-dc-tpl="148" style="border-top: 1px solid rgb(238, 241, 237);"><td data-dc-tpl="149" style="padding: 12px 0px; color: rgb(70, 82, 74);"><span class="sc-interp">Sel 3 Nov · 07.50</span></td><td data-dc-tpl="150" style="font-weight: 600;"><span class="sc-interp">Pak Indra</span></td><td data-dc-tpl="151"><span data-dc-tpl="152" style="display: inline-flex; align-items: center; gap: 8px;"><span data-dc-tpl="153" style="width: 28px; height: 28px; border-radius: 8px; background: rgb(231, 239, 250); color: rgb(26, 79, 140); display: inline-flex; align-items: center; justify-content: center;"><svg data-dc-tpl="154" class="i" viewBox="0 0 24 24" aria-hidden="true" style="width: 16px; height: 16px;"><path data-dc-tpl="155" d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11Z"></path></svg></span><span class="sc-interp">Penyiraman</span></span></td><td data-dc-tpl="156"><span class="sc-interp">350 liter</span></td></tr>
+              
+                <tr data-dc-tpl="148" style="border-top: 1px solid rgb(238, 241, 237);"><td data-dc-tpl="149" style="padding: 12px 0px; color: rgb(70, 82, 74);"><span class="sc-interp">Sel 3 Nov · 07.10</span></td><td data-dc-tpl="150" style="font-weight: 600;"><span class="sc-interp">Pak Indra</span></td><td data-dc-tpl="151"><span data-dc-tpl="152" style="display: inline-flex; align-items: center; gap: 8px;"><span data-dc-tpl="153" style="width: 28px; height: 28px; border-radius: 8px; background: rgb(251, 233, 230); color: rgb(158, 42, 28); display: inline-flex; align-items: center; justify-content: center;"><svg data-dc-tpl="154" class="i" viewBox="0 0 24 24" aria-hidden="true" style="width: 16px; height: 16px;"><path data-dc-tpl="155" d="M4 10h16l-1.5 9a1.5 1.5 0 0 1-1.5 1.3H7a1.5 1.5 0 0 1-1.5-1.3ZM8 10l3-6M16 10l-3-6M9 14v3M15 14v3"></path></svg></span><span class="sc-interp">Panen</span></span></td><td data-dc-tpl="156"><span class="sc-interp">30 kg</span></td></tr>
+              
+                <tr data-dc-tpl="148" style="border-top: 1px solid rgb(238, 241, 237);"><td data-dc-tpl="149" style="padding: 12px 0px; color: rgb(70, 82, 74);"><span class="sc-interp">Sen 2 Nov · 09.40</span></td><td data-dc-tpl="150" style="font-weight: 600;"><span class="sc-interp">Pak Jaka</span></td><td data-dc-tpl="151"><span data-dc-tpl="152" style="display: inline-flex; align-items: center; gap: 8px;"><span data-dc-tpl="153" style="width: 28px; height: 28px; border-radius: 8px; background: rgb(230, 242, 231); color: rgb(31, 90, 39); display: inline-flex; align-items: center; justify-content: center;"><svg data-dc-tpl="154" class="i" viewBox="0 0 24 24" aria-hidden="true" style="width: 16px; height: 16px;"><path data-dc-tpl="155" d="M6 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM6 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM8.1 7.9 20 18M8.1 16.1 20 6"></path></svg></span><span class="sc-interp">Pemangkasan tunas air</span></span></td><td data-dc-tpl="156"><span class="sc-interp">1 baris</span></td></tr>
+              
+                <tr data-dc-tpl="148" style="border-top: 1px solid rgb(238, 241, 237);"><td data-dc-tpl="149" style="padding: 12px 0px; color: rgb(70, 82, 74);"><span class="sc-interp">Sen 2 Nov · 07.15</span></td><td data-dc-tpl="150" style="font-weight: 600;"><span class="sc-interp">Pak Jaka</span></td><td data-dc-tpl="151"><span data-dc-tpl="152" style="display: inline-flex; align-items: center; gap: 8px;"><span data-dc-tpl="153" style="width: 28px; height: 28px; border-radius: 8px; background: rgb(231, 239, 250); color: rgb(26, 79, 140); display: inline-flex; align-items: center; justify-content: center;"><svg data-dc-tpl="154" class="i" viewBox="0 0 24 24" aria-hidden="true" style="width: 16px; height: 16px;"><path data-dc-tpl="155" d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11Z"></path></svg></span><span class="sc-interp">Penyiraman</span></span></td><td data-dc-tpl="156"><span class="sc-interp">400 liter</span></td></tr>
+              
+                <tr data-dc-tpl="148" style="border-top: 1px solid rgb(238, 241, 237);"><td data-dc-tpl="149" style="padding: 12px 0px; color: rgb(70, 82, 74);"><span class="sc-interp">Min 1 Nov · 08.00</span></td><td data-dc-tpl="150" style="font-weight: 600;"><span class="sc-interp">Pak Jaka</span></td><td data-dc-tpl="151"><span data-dc-tpl="152" style="display: inline-flex; align-items: center; gap: 8px;"><span data-dc-tpl="153" style="width: 28px; height: 28px; border-radius: 8px; background: rgb(255, 241, 204); color: rgb(110, 70, 0); display: inline-flex; align-items: center; justify-content: center;"><svg data-dc-tpl="154" class="i" viewBox="0 0 24 24" aria-hidden="true" style="width: 16px; height: 16px;"><path data-dc-tpl="155" d="M8 5h8l-1 3c2.5 1.5 4 4 4 7a5 5 0 0 1-5 5h-4a5 5 0 0 1-5-5c0-3 1.5-5.5 4-7ZM9.5 8h5"></path></svg></span><span class="sc-interp">Pemupukan NPK</span></span></td><td data-dc-tpl="156"><span class="sc-interp">5 kg</span></td></tr>
+              
+            </tbody>
+          </table>
+        </section>
+        <section data-dc-tpl="157" class="card" style="grid-column: span 5; padding: 20px; display: flex; flex-direction: column; gap: 10px;">
+          <div data-dc-tpl="158" style="display: flex; align-items: center; justify-content: space-between;"><h2 data-dc-tpl="159" class="h2">Jadwal mendekati target</h2><a data-dc-tpl="160" href="M04-JadwalTanam.dc.html" style="font: 600 14px / 1 Inter, sans-serif;">Kelola jadwal</a></div>
+          
+            <div data-dc-tpl="162" style="display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 12px; background: rgb(255, 248, 246);">
+              <div data-dc-tpl="163" style="flex: 1 1 0%; min-width: 0px;"><div data-dc-tpl="164" style="font: 600 15px / 1.3 Inter, sans-serif;"><span class="sc-interp">Penyemprotan fungisida</span></div><div data-dc-tpl="165" class="src" style="font-size: 13px;"><span class="sc-interp">GH-01 · Pak Jaka</span> · Target <span class="sc-interp">Sen 2 Nov</span></div></div>
+              <span data-dc-tpl="166" class="badge b-red"><span class="sc-interp">Terlambat 1 hari</span></span>
+            </div>
+          
+            <div data-dc-tpl="162" style="display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 12px; background: rgb(247, 249, 246);">
+              <div data-dc-tpl="163" style="flex: 1 1 0%; min-width: 0px;"><div data-dc-tpl="164" style="font: 600 15px / 1.3 Inter, sans-serif;"><span class="sc-interp">Panen rutin</span></div><div data-dc-tpl="165" class="src" style="font-size: 13px;"><span class="sc-interp">GH-01 · Pak Jaka</span> · Target <span class="sc-interp">Sel 3 Nov</span></div></div>
+              <span data-dc-tpl="166" class="badge b-green"><span class="sc-interp">Hari ini</span></span>
+            </div>
+          
+            <div data-dc-tpl="162" style="display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 12px; background: rgb(247, 249, 246);">
+              <div data-dc-tpl="163" style="flex: 1 1 0%; min-width: 0px;"><div data-dc-tpl="164" style="font: 600 15px / 1.3 Inter, sans-serif;"><span class="sc-interp">Pemupukan susulan (KNO₃)</span></div><div data-dc-tpl="165" class="src" style="font-size: 13px;"><span class="sc-interp">GH-01 · Pak Jaka</span> · Target <span class="sc-interp">Rab 4 Nov</span></div></div>
+              <span data-dc-tpl="166" class="badge b-amber"><span class="sc-interp">Besok</span></span>
+            </div>
+          
+            <div data-dc-tpl="162" style="display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 12px; background: rgb(247, 249, 246);">
+              <div data-dc-tpl="163" style="flex: 1 1 0%; min-width: 0px;"><div data-dc-tpl="164" style="font: 600 15px / 1.3 Inter, sans-serif;"><span class="sc-interp">Pemasangan ajir</span></div><div data-dc-tpl="165" class="src" style="font-size: 13px;"><span class="sc-interp">GH-03 · Pak Ari</span> · Target <span class="sc-interp">Rab 4 Nov</span></div></div>
+              <span data-dc-tpl="166" class="badge b-amber"><span class="sc-interp">Besok</span></span>
+            </div>
+          
+        </section>
+      </div>
+    </div>
+  </main></div>
+</body>
+</html>

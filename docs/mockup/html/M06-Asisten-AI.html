@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1440">
+<title>M06 Asisten AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" data-dc-tpl="1">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" data-dc-tpl="2">
+<style>
+
+body{margin:0;font-family:'Inter',system-ui,sans-serif;color:#17231A;background:#F3F6F2}
+a{color:#23602C}a:hover{color:#17231A}
+*{box-sizing:border-box}
+.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.card{background:#fff;border:1px solid #E1E7DF;border-radius:14px;box-shadow:0 1px 2px rgba(23,35,26,.05)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 16px;border-radius:12px;font:600 15px/1 'Inter',sans-serif;border:1px solid transparent;cursor:pointer;text-decoration:none;white-space:nowrap}
+.btn-p{background:#2F7D3A;color:#fff}.btn-p:hover{background:#23602C;color:#fff}
+.btn-s{background:#fff;color:#17231A;border-color:#C9D3C6}.btn-s:hover{color:#17231A;background:#F3F6F2}
+.badge{display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px;border-radius:999px;font:600 13px/1 'Inter',sans-serif;white-space:nowrap}
+.b-blue{background:#E7EFFA;color:#1A4F8C}.b-teal{background:#DDF1EF;color:#0E5F5C}.b-gray{background:#EEF1ED;color:#46524A}.b-amber{background:#FFF1CC;color:#6E4600}
+.muted{color:#56645A}.src{font:500 12px/1.4 'Inter',sans-serif;color:#56645A}
+.h2{margin:0;font:700 17px/1.3 'Inter',sans-serif}
+.snav{display:flex;align-items:center;gap:12px;height:44px;padding:0 12px;border-radius:10px;font:600 15px/1 'Inter',sans-serif;color:#46524A;text-decoration:none}
+.snav:hover{background:#F3F6F2;color:#17231A}.snav.on{background:#E6F2E7;color:#1F5A27}
+.iconbtn{width:44px;height:44px;border-radius:12px;border:1px solid #E1E7DF;background:#fff;color:#46524A;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;position:relative}
+.sug{display:inline-flex;align-items:center;height:40px;padding:0 14px;border-radius:20px;border:1px solid #C9D3C6;background:#fff;font:500 14px/1 'Inter',sans-serif;color:#17231A;cursor:pointer}
+.sug:hover{background:#F3F6F2}
+.me{align-self:flex-end;max-width:70%;padding:12px 16px;border-radius:16px 16px 4px 16px;background:#17231A;color:#fff;font:500 15px/1.5 'Inter',sans-serif}
+.ai{display:flex;gap:12px;align-items:flex-start;max-width:88%}
+.aib{flex:1;padding:16px;border-radius:4px 16px 16px 16px;background:#fff;border:1px solid #E1E7DF;font:400 15px/1.6 'Inter',sans-serif;display:flex;flex-direction:column;gap:10px}
+.aib ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:4px}
+
+html,body{margin:0;width:1440px;height:1160px}
+</style>
+</head>
+<body>
+<div data-dc-tpl="4" style="width: 1440px; height: 1160px; display: flex; background: rgb(243, 246, 242);">
+  <aside data-dc-tpl="5" style="width: 248px; flex: 0 0 auto; background: rgb(255, 255, 255); border-right: 1px solid rgb(225, 231, 223); display: flex; flex-direction: column; padding: 20px 14px; gap: 4px;">
+    <div data-dc-tpl="6" style="display: flex; align-items: center; gap: 10px; padding: 0px 6px 20px;">
+      <svg data-dc-tpl="7" width="38" height="38" viewBox="0 0 36 36" role="img" aria-label="Logo Dr. Greenhouse Pendamping"><rect data-dc-tpl="8" width="36" height="36" rx="10" fill="#2F7D3A"></rect><path data-dc-tpl="9" d="M10 25c0-8 5-13 15-14 0 9-5 14-14 14Zm0 0 7-7" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path><circle data-dc-tpl="10" cx="26.5" cy="25.5" r="3.5" fill="#E8604E"></circle></svg>
+      <div data-dc-tpl="11"><div data-dc-tpl="12" style="font: 800 16px / 1.2 Inter, sans-serif;">Dr. Greenhouse</div><div data-dc-tpl="13" class="src">Pendamping · Agrotani</div></div>
+    </div>
+    <a data-dc-tpl="14" class="snav" href="M01-Dasbor.dc.html"><svg data-dc-tpl="15" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="16" d="M3 10.5 12 3l9 7.5M5 9.5V20h5v-6h4v6h5V9.5"></path></svg>Dasbor</a>
+    <a data-dc-tpl="17" class="snav" href="M02-LogAktivitas.dc.html"><svg data-dc-tpl="18" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="19" d="M9 4h6v3H9zM9 5.5H6.5A1.5 1.5 0 0 0 5 7v12.5A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5V7a1.5 1.5 0 0 0-1.5-1.5H15M8.5 12h7M8.5 16h5"></path></svg>Log Aktivitas</a>
+    <a data-dc-tpl="20" class="snav" href="M03-Keuangan.dc.html"><svg data-dc-tpl="21" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="22" d="M4 7.5A2.5 2.5 0 0 1 6.5 5H18v3M4 7.5V18a2 2 0 0 0 2 2h14V8H6.5A2.5 2.5 0 0 1 4 7.5ZM16 14h1.5"></path></svg>Keuangan</a>
+    <a data-dc-tpl="23" class="snav" href="M04-JadwalTanam.dc.html"><svg data-dc-tpl="24" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="25" d="M4 6.5A1.5 1.5 0 0 1 5.5 5h13A1.5 1.5 0 0 1 20 6.5v12a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5ZM4 10h16M8 3v4M16 3v4"></path></svg>Jadwal Tanam</a>
+    <a data-dc-tpl="26" class="snav" href="M05-Macroclimate.dc.html"><svg data-dc-tpl="27" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="28" d="M7 18a4 4 0 0 1-.5-7.97A5.5 5.5 0 0 1 17.2 9 4.5 4.5 0 0 1 17 18Z"></path></svg>Macroclimate</a>
+    <div data-dc-tpl="29" style="flex: 1 1 0%;"></div>
+    <a data-dc-tpl="30" class="snav" href="P01-Onboarding.dc.html"><svg data-dc-tpl="31" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="32" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18ZM9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17h.01"></path></svg>Bantuan</a>
+    <div data-dc-tpl="33" style="display: flex; align-items: center; gap: 10px; padding: 12px 8px 0px; border-top: 1px solid rgb(238, 241, 237); margin-top: 8px;">
+      <div data-dc-tpl="34" style="width: 38px; height: 38px; border-radius: 19px; background: rgb(23, 35, 26); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; font: 700 14px / 1 Inter, sans-serif;">PF</div>
+      <div data-dc-tpl="35"><div data-dc-tpl="36" style="font: 700 14px / 1.3 Inter, sans-serif;">Pak Ferry</div><div data-dc-tpl="37" class="src">Manajemen</div></div>
+    </div>
+  </aside>
+
+  <main data-dc-tpl="38" style="flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column;">
+    <header data-dc-tpl="39" style="height: 72px; flex: 0 0 auto; background: rgb(255, 255, 255); border-bottom: 1px solid rgb(225, 231, 223); display: flex; align-items: center; gap: 12px; padding: 0px 32px;">
+      <a data-dc-tpl="40" href="M05-Macroclimate.dc.html" class="iconbtn" aria-label="Kembali ke Macroclimate"><svg data-dc-tpl="41" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="42" d="M15 5l-7 7 7 7"></path></svg></a>
+      <div data-dc-tpl="43" style="flex: 1 1 0%;">
+        <h1 data-dc-tpl="44" style="margin: 0px; font: 800 22px / 1.2 Inter, sans-serif;">Asisten AI</h1>
+        <div data-dc-tpl="45" class="src" style="margin-top: 2px;">Membantu membaca data Monitoring Macroclimate · hanya untuk Manajemen</div>
+      </div>
+      <button data-dc-tpl="46" class="btn btn-s"><svg data-dc-tpl="47" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="48" d="M12 5v14M5 12h14"></path></svg>Percakapan baru</button>
+    </header>
+
+    <div data-dc-tpl="49" style="flex: 1 1 0%; display: flex; min-height: 0px;">
+      <div data-dc-tpl="50" style="flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column;">
+        <div data-dc-tpl="51" style="margin: 20px 32px 0px; display: flex; gap: 10px; align-items: center; padding: 12px 16px; border-radius: 12px; background: rgb(255, 241, 204); font: 500 14px / 1.45 Inter, sans-serif; color: rgb(74, 51, 0);">
+          <svg data-dc-tpl="52" class="i" viewBox="0 0 24 24" aria-hidden="true" style="color: rgb(110, 70, 0);"><path data-dc-tpl="53" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18ZM12 11v5M12 8h.01"></path></svg>
+          <span data-dc-tpl="54"><strong data-dc-tpl="55">Asisten membantu menjelaskan data. Keputusan tetap di tangan Anda.</strong> Asisten tidak mengubah jadwal atau data apa pun.</span>
+        </div>
+
+        <div data-dc-tpl="56" style="flex: 1 1 0%; padding: 24px 32px; display: flex; flex-direction: column; gap: 18px;">
+          <div data-dc-tpl="57" class="me">Ringkas kondisi cuaca minggu ini.</div>
+
+          <div data-dc-tpl="58" class="ai">
+            <div data-dc-tpl="59" style="width: 36px; height: 36px; border-radius: 12px; background: rgb(47, 125, 58); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; flex: 0 0 auto;"><svg data-dc-tpl="60" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="61" d="M5 18.5 3.5 21V6.5A2.5 2.5 0 0 1 6 4h12a2.5 2.5 0 0 1 2.5 2.5v9A2.5 2.5 0 0 1 18 18H5.5ZM8 9.5h8M8 13h5"></path></svg></div>
+            <div data-dc-tpl="62" class="aib">
+              <div data-dc-tpl="63">Ringkasan 28 Okt – 2 Nov 2026:</div>
+              <ul data-dc-tpl="64">
+                <li data-dc-tpl="65"><strong data-dc-tpl="66">Suhu maksimum</strong> hasil ukur AWS antara 21,3°C dan 25,4°C. Hari terpanas Jum, 30 Okt.</li>
+                <li data-dc-tpl="67"><strong data-dc-tpl="68">Kelembapan</strong> naik dari rata-rata 76% (Jum, 30 Okt) menjadi 91% (Sen, 2 Nov).</li>
+                <li data-dc-tpl="69">Prakiraan BMKG lebih hangat dari hasil ukur AWS pada 4 dari 6 hari. Selisih terbesar <strong data-dc-tpl="70">1,0°C</strong> (Min, 1 Nov).</li>
+                <li data-dc-tpl="71">Hari ini BMKG memprakirakan <strong data-dc-tpl="72">hujan ringan siang</strong> dan hujan sedang sore.</li>
+              </ul>
+              <div data-dc-tpl="73" role="img" aria-label="Kelembapan rata-rata AWS 28 Okt sampai 2 Nov: 84, 88, 76, 79, 89, 91 persen" style="display: flex; align-items: flex-end; gap: 6px; height: 56px; padding: 8px 10px; border-radius: 10px; background: rgb(247, 249, 246);">
+                <span data-dc-tpl="74" style="flex: 1 1 0%; height: 58%; background: rgb(15, 110, 110); border-radius: 3px 3px 0px 0px;"></span><span data-dc-tpl="75" style="flex: 1 1 0%; height: 70%; background: rgb(15, 110, 110); border-radius: 3px 3px 0px 0px;"></span><span data-dc-tpl="76" style="flex: 1 1 0%; height: 22%; background: rgb(15, 110, 110); border-radius: 3px 3px 0px 0px;"></span><span data-dc-tpl="77" style="flex: 1 1 0%; height: 34%; background: rgb(15, 110, 110); border-radius: 3px 3px 0px 0px;"></span><span data-dc-tpl="78" style="flex: 1 1 0%; height: 73%; background: rgb(15, 110, 110); border-radius: 3px 3px 0px 0px;"></span><span data-dc-tpl="79" style="flex: 1 1 0%; height: 85%; background: rgb(15, 110, 110); border-radius: 3px 3px 0px 0px;"></span>
+                <span data-dc-tpl="80" class="src" style="margin-left: 8px; align-self: center; width: 120px;">Kelembapan AWS 28/10–2/11</span>
+              </div>
+              <div data-dc-tpl="81" class="src" style="font-size: 13px;">Catatan: AWS dipasang di luar greenhouse, jadi angka ini belum tentu sama dengan kondisi di dalam greenhouse.</div>
+              <div data-dc-tpl="82" style="display: flex; gap: 8px; flex-wrap: wrap;">
+                <span data-dc-tpl="83" class="badge b-teal">AWS Agrotani · 28 Okt–2 Nov</span><span data-dc-tpl="84" class="badge b-blue">BMKG · terbit 3 Nov 05.00</span>
+              </div>
+            </div>
+          </div>
+
+          <div data-dc-tpl="85" class="me">Berapa suhu di dalam GH-02 sekarang?</div>
+
+          <div data-dc-tpl="86" class="ai">
+            <div data-dc-tpl="87" style="width: 36px; height: 36px; border-radius: 12px; background: rgb(47, 125, 58); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; flex: 0 0 auto;"><svg data-dc-tpl="88" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="89" d="M5 18.5 3.5 21V6.5A2.5 2.5 0 0 1 6 4h12a2.5 2.5 0 0 1 2.5 2.5v9A2.5 2.5 0 0 1 18 18H5.5ZM8 9.5h8M8 13h5"></path></svg></div>
+            <div data-dc-tpl="90" class="aib" style="border-color: rgb(232, 216, 168);">
+              <div data-dc-tpl="91" style="display: flex; align-items: center; gap: 8px; font-weight: 700; color: rgb(110, 70, 0);"><svg data-dc-tpl="92" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="93" d="M12 4 2.5 20h19ZM12 10v4.5M12 17.5h.01"></path></svg>Data tidak tersedia</div>
+              <div data-dc-tpl="94">Sistem belum memiliki data suhu <strong data-dc-tpl="95">di dalam</strong> GH-02. Yang tersedia hanya:</div>
+              <ul data-dc-tpl="96">
+                <li data-dc-tpl="97">Hasil ukur AWS di luar greenhouse dekat GH-01: <strong data-dc-tpl="98">18,4°C pukul 07.30 WIB</strong>.</li>
+                <li data-dc-tpl="99">Prakiraan BMKG wilayah Lembang: 16–23°C hari ini.</li>
+              </ul>
+              <div data-dc-tpl="100">Untuk mengetahui suhu di dalam GH-02, perlu dicek langsung di lokasi.</div>
+              <div data-dc-tpl="101" style="display: flex; gap: 8px; flex-wrap: wrap;"><span data-dc-tpl="102" class="badge b-teal">AWS Agrotani · 07.30 WIB</span><span data-dc-tpl="103" class="badge b-blue">BMKG · terbit 05.00</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div data-dc-tpl="104" style="padding: 0px 32px 24px; display: flex; flex-direction: column; gap: 12px;">
+          <div data-dc-tpl="105" style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button data-dc-tpl="106" class="sug">Bandingkan prakiraan BMKG dengan pengamatan AWS kemarin</button>
+            <button data-dc-tpl="107" class="sug">Kapan hujan paling mungkin hari ini?</button>
+            <button data-dc-tpl="108" class="sug">Jelaskan arti kelembapan 91%</button>
+          </div>
+          <div data-dc-tpl="109" style="display: flex; gap: 10px; align-items: center; padding: 8px 8px 8px 16px; border-radius: 16px; border: 1.5px solid rgb(201, 211, 198); background: rgb(255, 255, 255);">
+            <label data-dc-tpl="110" for="q" style="position: absolute; left: -9999px;">Tulis pertanyaan</label>
+            <input data-dc-tpl="111" id="q" placeholder="Tanyakan tentang data cuaca dan macroclimate…" style="flex: 1 1 0%; border: 0px; outline: 0px; font: 400 16px / 1.4 Inter, sans-serif; color: rgb(23, 35, 26); background: transparent; min-height: 40px;">
+            <button data-dc-tpl="112" class="btn btn-p" aria-label="Kirim pertanyaan" style="width: 48px; padding: 0px;"><svg data-dc-tpl="113" class="i" viewBox="0 0 24 24" aria-hidden="true"><path data-dc-tpl="114" d="M4 12 20 4l-5 16-3-7ZM12 13l8-9"></path></svg></button>
+          </div>
+        </div>
+      </div>
+
+      <aside data-dc-tpl="115" style="width: 320px; flex: 0 0 auto; background: rgb(255, 255, 255); border-left: 1px solid rgb(225, 231, 223); padding: 24px 20px; display: flex; flex-direction: column; gap: 16px;">
+        <h2 data-dc-tpl="116" class="h2">Data yang dipakai asisten</h2>
+        <div data-dc-tpl="117" class="src" style="font-size: 13px;">Jawaban hanya disusun dari data berikut. Data lain, termasuk keuangan petani, tidak dikirim ke layanan AI.</div>
+        <div data-dc-tpl="118" style="padding: 14px; border-radius: 12px; border: 1px solid rgb(225, 231, 223); display: flex; flex-direction: column; gap: 6px;">
+          <span data-dc-tpl="119" class="badge b-blue" style="align-self: flex-start;">Prakiraan BMKG</span>
+          <div data-dc-tpl="120" style="font: 600 14px / 1.4 Inter, sans-serif;">Kec. Lembang · per 3 jam</div>
+          <div data-dc-tpl="121" class="src">Terbit Sel, 3 Nov 05.00 WIB</div>
+        </div>
+        <div data-dc-tpl="122" style="padding: 14px; border-radius: 12px; border: 1px solid rgb(225, 231, 223); display: flex; flex-direction: column; gap: 6px;">
+          <span data-dc-tpl="123" class="badge b-teal" style="align-self: flex-start;">Pengamatan AWS Agrotani</span>
+          <div data-dc-tpl="124" style="font: 600 14px / 1.4 Inter, sans-serif;">Suhu, kelembapan, curah hujan</div>
+          <div data-dc-tpl="125" class="src">27 Okt – 3 Nov · terakhir 07.30 WIB</div>
+        </div>
+        <div data-dc-tpl="126" style="padding: 14px; border-radius: 12px; background: rgb(247, 249, 246); display: flex; flex-direction: column; gap: 8px; font: 500 13px / 1.45 Inter, sans-serif;">
+          <div data-dc-tpl="127" style="font-weight: 700;">Batasan asisten</div>
+          <div data-dc-tpl="128">• Tidak mengambil keputusan atau mengubah data.</div>
+          <div data-dc-tpl="129">• Menyebut sumber dan waktu data di setiap jawaban.</div>
+          <div data-dc-tpl="130">• Memberi tahu jika data tidak tersedia.</div>
+        </div>
+      </aside>
+    </div>
+  </main></div>
+</body>
+</html>
